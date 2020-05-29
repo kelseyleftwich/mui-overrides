@@ -1,56 +1,23 @@
 import React from 'react';
-import { Button, Grid, withStyles } from '@material-ui/core';
-import clsx from 'clsx';
-import { amber, deepPurple } from '@material-ui/core/colors';
+import { Button, Grid } from '@material-ui/core';
 
-const styles = ({ theme }) => ({
-  default: {
-    borderRadius: 0,
-    textTransform: 'none',
-  },
-  primary: {
-    '&:hover': {
-      backgroundColor: amber[500],
-      color: deepPurple[900],
-    },
-  },
-  secondary: {
-    fontWeight: 700,
-  },
-});
-
-const Buttons = ({ classes }) => {
+const Buttons = () => {
   return (
     <Grid container spacing={3}>
       <Grid item>
-        <Button
-          disableElevation
-          variant="contained"
-          color="default"
-          className={classes.default}
-        >
+        <Button variant="contained" color="default">
           Default
         </Button>
       </Grid>
 
       <Grid item>
-        <Button
-          variant="contained"
-          color="primary"
-          className={clsx(classes.default, classes.primary)}
-          disableElevation
-        >
+        <Button variant="contained" color="primary">
           Primary
         </Button>
       </Grid>
 
       <Grid item>
-        <Button
-          variant="contained"
-          color="secondary"
-          className={clsx(classes.default, classes.secondary)}
-          disableElevation
-        >
+        <Button variant="contained" color="secondary">
           Secondary
         </Button>
       </Grid>
@@ -58,4 +25,4 @@ const Buttons = ({ classes }) => {
   );
 };
 
-export default withStyles(styles)(Buttons);
+export default Buttons;

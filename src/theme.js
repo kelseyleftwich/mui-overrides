@@ -14,4 +14,28 @@ const theme = createMuiTheme({
   },
 });
 
+theme.props = {
+  MuiButton: {
+    disableElevation: true,
+  },
+};
+
+theme.overrides = {
+  MuiButton: {
+    root: {
+      borderRadius: 0,
+      textTransform: 'none',
+    },
+    containedPrimary: {
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.main,
+        color: theme.palette.primary.dark,
+      },
+    },
+    containedSecondary: {
+      fontWeight: 700,
+    },
+  },
+};
+
 export default theme;
