@@ -23,6 +23,9 @@ theme.props = {
   MuiInput: {
     disableUnderline: true,
   },
+  MuiTooltip: {
+    arrow: true,
+  },
 };
 
 theme.overrides = {
@@ -57,6 +60,16 @@ theme.overrides = {
         border: `1px solid ${theme.palette.primary.main}`,
         outline: `1px solid ${theme.palette.primary.main}`,
       },
+    },
+  },
+  MuiTooltip: {
+    tooltip: {
+      backgroundColor: '#fff',
+      border: `2px solid ${theme.palette.primary.main}`,
+      color: theme.palette.primary.main,
+    },
+    arrow: {
+      color: theme.palette.primary.main,
     },
   },
 };
