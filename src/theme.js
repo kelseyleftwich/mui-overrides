@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import deepPurple from '@material-ui/core/colors/deepPurple';
-import amber from '@material-ui/core/colors/amber';
+import { grey, deepPurple, amber } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
@@ -18,6 +17,12 @@ theme.props = {
   MuiButton: {
     disableElevation: true,
   },
+  MuiInputLabel: {
+    shrink: true,
+  },
+  MuiInput: {
+    disableUnderline: true,
+  },
 };
 
 theme.overrides = {
@@ -34,6 +39,24 @@ theme.overrides = {
     },
     containedSecondary: {
       fontWeight: 700,
+    },
+  },
+  MuiInputLabel: {
+    root: {
+      textTransform: 'uppercase',
+      fontSize: '1.5rem',
+    },
+  },
+  MuiInput: {
+    root: {
+      top: theme.spacing(2),
+      border: `1px solid ${grey[500]}`,
+      outline: `1px solid transparent`,
+      padding: theme.spacing(1),
+      '&$focused': {
+        border: `1px solid ${theme.palette.primary.main}`,
+        outline: `1px solid ${theme.palette.primary.main}`,
+      },
     },
   },
 };
